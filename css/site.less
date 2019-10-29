@@ -1,0 +1,103 @@
+//body {
+//    margin: 0;
+//    background-color: #fff !important;
+//    font-size: 19px;
+//    line-height: 1.7em;
+//    font-family: minion-pro;
+//    font-style: normal;
+//    font-weight: 400;
+//    letter-spacing: 0.01em;
+//    color: #281a1799;
+//    pointer-events: auto;
+//    text-size-adjust: 100%;
+//    text-transform: none;
+//    -webkit-font-smoothing: subpixel-antialiased;
+//    .parallax-container {
+//        position: fixed;
+//        background-color: #000;
+//        display: block;
+//        height: 591px;
+//        left: 0;
+//        overflow: hidden;
+//        top: 0;
+//        transform: translate3d(0px, 0px, 0px);
+//        width: 1903px;
+//        will-change: transform;
+//        transform: translatez(0);
+//        -webkit-transform: translatez(0);
+//        z-index: -1;
+//    }
+//    header {
+//        max-width: 1570px;
+//        padding: 40px 160px;
+//        nav {
+//            display: flex;
+//            justify-content: flex-end;
+//            .header-nav-item {
+//                -webkit-transition: color 170ms ease-in-out, background-color 170ms ease-in-out;
+//                -moz-transition: color 170ms ease-in-out, background-color 170ms ease-in-out;
+//                -ms-transition: color 170ms ease-in-out, background-color 170ms ease-in-out;
+//                -o-transition: color 170ms ease-in-out, background-color 170ms ease-in-out;
+//                transition: color 170ms ease-in-out, background-color 170ms ease-in-out;
+//            }
+//        }
+//    }
+//}
+
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.sidenav-trigger {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: 591px;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
