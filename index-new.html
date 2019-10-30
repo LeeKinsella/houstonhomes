@@ -130,9 +130,40 @@
                     </div>
                     <h3>Please Complete the Form Below</h3>
                     <form id="contact-form">
-                        <label for="name">Name</label>
-                        <input type="text" id="first-name" name="name">
-                        <input type="text" id="last-name" name="name">
+                        <fieldset id="name" class="required">
+                            <div class="title">Name <span class="required">*</span></div>
+                            <div class="field-container">
+                                <div class="field first-name">
+                                    <input type="text" id="first-name" name="name">
+                                    <label class="caption">First Name</label>
+                                </div>
+                                <div class="field last-name">
+                                    <input type="text" id="last-name" name="name">
+                                    <label class="caption">Last Name</label>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="title">Email <span class="required">*</span></div>
+                        <div class="field-container">
+                            <div class="field email">
+                                <input type="email" id="email" name="email">
+                            </div>
+                        </div>
+                        <div class="title">Subject <span class="required">*</span></div>
+                        <div class="field-container">
+                            <div class="field subject">
+                                <input type="text" id="subject" name="subject">
+                            </div>
+                        </div>
+                        <div class="title">Message <span class="required">*</span></div>
+                        <div class="field-container">
+                            <div class="field message">
+                                <textarea rows="10" id="message" name="message"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-button-wrapper">
+                            <input type="submit" value="Submit">
+                        </div>
                     </form>
                 </div>
                 <div class="column column-span-2">&nbsp;</div>
@@ -142,6 +173,20 @@
 
     <footer class="page-footer">
         <div class="container">
+            <div class="section">
+                <div class="content">
+                    <h2><strong>Check us out on Social Media!</strong></h2>
+                    <div class="footer-nav">
+                        <a href="https://www.youtube.com/channel/UCGXrcapf04UWBZivMPaF5zA/videos" target="_blank" class="footer-nav-item">YouTube</a>
+                        <a href="https://www.instagram.com/closingbear/" target="_blank" class="footer-nav-item">Instagram</a>
+                        <a href="https://www.facebook.com/closingbear/" target="_blank" class="footer-nav-item">Facebook</a>
+                    </div>
+                    <p>Logo design courtesy of Lee Kinsella</p>
+                    <p>
+                        <a href="http://www.varickrosete.com" target="_blank">www.VarickRosete.com</a>
+                    </p>
+                </div>
+            </div>
         </div>
     </footer>
 
