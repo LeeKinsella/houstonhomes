@@ -29,8 +29,7 @@ $(function () {
         });
     });
     window.setTimeout(function() {
-                      
-    $('.parallax').parallax();
-                      });
+        $('.parallax').parallax();
+    });
 
 });
