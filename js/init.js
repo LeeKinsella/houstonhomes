@@ -7,6 +7,10 @@ $(function () {
             $('nav').removeClass('stuck');
         }
     });
+//    $('.qualia-button').on('click', function() {
+//        console.log($('.clickable'));
+//        $('.clickable').click();
+//    });
 //    $('.header').height($(window).height());
 //    fetch("../header.html")
 //      .then(response => {
