@@ -16,12 +16,14 @@ body {
     .navbar {
         padding: 28px;
         background: @background-color;
+        transition: padding 0.1s ease 0.1s;
         .navbar-brand,
         .nav-link {
             color: @text-color;
             cursor: pointer;
             img {
                 height: 100px;
+                transition: height 0.1s ease 0.1s;
             }
         }
         .navbar-collapse {
@@ -32,6 +34,12 @@ body {
             font: 18px lato, sans-serif;
             &:hover {
                 color: gray;
+            }
+        }
+        &.stuck {
+            padding: 10px;
+            img {
+                height: 75px;
             }
         }
     }
