@@ -10,16 +10,64 @@ body {
     text-transform: none;
     padding: 0;
     margin: 0;
-    .search-container {
-        display: none;
-    }
     .navbar {
         padding: 28px;
-        background: @background-color;
+        background-color: @background-color;
         transition: padding 0.1s ease 0.1s;
+        .search-container {
+            width: 100%;
+            position: absolute;
+            opacity: 0;
+            z-index: 0;
+            transition: opacity 0.1s ease 0.1s;
+            #search-box {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+            form {
+                width: 100%;
+            }
+            input {
+                width: 90%;
+                text-transform: uppercase;
+                background-color: #0000;
+                border-color: #0000;
+                color: @text-color;
+                font-size: 43px;
+                font-weight: 700;
+                transition: font-size 0.1s ease 0.1s;
+                &:focus {
+                    outline-color: #0000;
+                }
+            }
+            i {
+                color: @text-color;
+                font-size: 26px;
+                cursor: pointer;
+                transition: color 0.2s ease;
+                &:hover {
+                    color: @kelly-green;
+                }
+            }
+            &.active {
+                opacity: 1;
+                z-index: 1;
+            }
+        }
+        .header-container {
+            width: 100%;
+            opacity: 0;
+            z-index: 0;
+            transition: opacity 0.1s ease 0.1s;
+            &.active {
+                opacity: 1;
+                z-index: 1;
+            }
+        }
         .navbar-brand,
         .nav-link {
-            color: @text-color;
             cursor: pointer;
             img {
                 height: 100px;
@@ -30,14 +78,19 @@ body {
             flex-grow: 0;
         }
         .nav-link {
+            color: @text-color !important;
             margin-right: 2rem !important;
             font: 18px lato, sans-serif;
+            transition: color 0.2s ease;
             &:hover {
-                color: gray;
+                color: @kelly-green !important;
             }
         }
         &.stuck {
             padding: 10px;
+            input {
+                font-size: 30px;
+            }
             img {
                 height: 75px;
             }
@@ -57,7 +110,7 @@ body {
             min-width: 100%;
             left: 0;
             top: 0;
-            background: rgba(255, 255, 255, 0.5);
+            background-color: rgba(255, 255, 255, 0.5);
         }
         .promo {
             display: flex;
@@ -97,7 +150,89 @@ body {
     }
     .testimonials {
         background-color: @kelly-green;
-        height: 400px;
         padding: 4rem 0;
+        .wpbr-review__reviewer-image {
+            
+        }
+        .wpbr-review__platform-icon {
+            background-image: url('https://www.federaltitle.com/wp-content/plugins/wp-business-reviews/assets/dist/images/sprite-google-places.png');
+            background-position: -10px -66px;
+            background-size: 200px 94px;
+            background-repeat: no-repeat;
+            right: 20px;
+            top: 20px;
+            display: block;
+            height: 18px;
+        }
+        .carousel-indicators {
+            bottom: -40px;
+            li {
+                height: 10px;
+                width: 10px;
+                border-radius: 50%;
+                margin-right: 5px;
+                margin-left: 5px;
+            }
+        }
+    }
+    footer {
+        font-family: Lato;
+        background-color: @background-color-light;
+        a {
+            text-decoration: none !important;
+            transition: color 0.2s ease;
+            &:hover {
+                color: @kelly-green !important;
+            }
+        }
+        .footer-container {
+            padding: 3rem 0;
+            p, a {
+                color: @text-color;
+                margin: 0;
+            }
+            img {
+                height: 100px;
+                margin-bottom: 3rem;
+            }
+            h6 {
+                color: #777;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                font-family: "Open Sans";
+                font-size: 12px;
+                margin-bottom: 20px;
+                line-height: 32px;
+            }
+            ul {
+                margin: 0;
+                padding: 0;
+                li {
+                    margin-bottom: 16px;
+                    &:not(:first-child) {
+                        margin-top: 16px;
+                    }
+                }
+            }
+        }
+        .footer-bottom {
+            padding: 20px 0;
+            background-color: @background-color;
+            .container {
+                align-items: center;
+            }
+            p {
+                font-size: 12px;
+                margin: 0;
+                color: #777;
+            }
+            .contact-icons {
+                a {
+                    margin-left: 20px;
+                    color: #777;
+                    font-size: 20px;
+                }
+            }
+        }
     }
 }

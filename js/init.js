@@ -1,5 +1,9 @@
 $(function () {
-    $('#testimonialsCarousel').carousel();
+        
+    $('.carousel').carousel({
+        interval: false
+    });
+    
     $(window).scroll(function() {
         if ($(window).scrollTop() != 0) {
             $('nav').addClass('stuck');
@@ -7,44 +11,17 @@ $(function () {
             $('nav').removeClass('stuck');
         }
     });
-//    $('.qualia-button').on('click', function() {
-//        console.log($('.clickable'));
-//        $('.clickable').click();
-//    });
-//    $('.header').height($(window).height());
-//    fetch("../header.html")
-//      .then(response => {
-//        return response.text();
-//      })
-//      .then(data => {
-//        document.querySelector("header").innerHTML = data;
-//      });
-//    fetch("../footer.html")
-//      .then(response => {
-//        return response.text();
-//      })
-//      .then(data => {
-//        document.querySelector("footer").innerHTML = data;
-//      });
-//    $('.sidenav-trigger span').click(function(e) {
-//        console.log(e);
-//        e.preventDefault();
-//        $(this).toggleClass('open');
-//        if ($(this).hasClass('open')) {
-//            $('.sidenav').css("transform", "translateX(0%)");
-//        } else {
-//            $('.sidenav').css("transform", "translateX(-105%)");
-//        }
-//    });
-//    $('.down-arrow').click(function() {
-//        window.scrollTo({
-//            top: $('.container > .section').offset().top,
-//            left: 0,
-//            behavior: 'smooth'
-//        });
-//    });
-//    window.setTimeout(function() {
-//        $('.parallax').parallax();
-//    });
+    
+    $('#searchbox i').click(function() {
+        $('.search-container').addClass('active');
+        $('.header-container').removeClass('active');
+        $('.ui-autocomplete-input').focus();
+    });
+    
+    $('#search-box i').click(function() {
+        $('.search-container').removeClass('active');
+        $('.header-container').addClass('active');
+        $('.ui-autocomplete-input').blur();
+    });
 
 });
