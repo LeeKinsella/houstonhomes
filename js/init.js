@@ -12,7 +12,7 @@ $(function () {
         }
     });
     
-    $('#searchbox i').click(function() {
+    $('#searchbox').click(function() {
         $('.search-container').addClass('active');
         $('.header-container').removeClass('active');
         $('.ui-autocomplete-input').focus();
