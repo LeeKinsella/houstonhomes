@@ -1,6 +1,12 @@
 $(function () {
         
-    $('.carousel').carousel({
+    $('#testimonialsCarousel').carousel({
+        interval: false
+    });
+    $('#testimonialsCarouselTablet').carousel({
+        interval: false
+    });
+    $('#testimonialsCarouselMobile').carousel({
         interval: false
     });
     

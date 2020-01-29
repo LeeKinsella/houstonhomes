@@ -46,13 +46,13 @@
             </div>
         </div>
         <div class="header-container d-flex flex-row justify-content-between active">
-            <a class="navbar-brand" href="#"><img src="images/LH Title Horizontal - White/LH%20Title%20Horizontal%20-%20White.png" alt="Logo"></a>
+            <a class="navbar-brand" href="home.html"><img src="images/LH Title Horizontal - White/LH%20Title%20Horizontal%20-%20White.png" alt="Logo"></a>
             <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation" aria-controls="main-navigation" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="main-navigation">
                 <div class="navbar-nav">
-                    <a class="nav-link active" href="#">Home<span class="sr-only"> (current)</span></a>
+                    <a class="nav-link active" href="home.html">Home<span class="sr-only"> (current)</span></a>
                     <a class="nav-link" href="#">Testimonials</a>
                     <a class="nav-link" href="#">Blog</a>
                     <a class="nav-link" href="#">Contact</a>
@@ -72,51 +72,10 @@
         </div>
     </div>
     
-    <div class="posts">
-        <?php
-
-        function OpenCon() {
-            $dbhost = "localhost";
-            $dbuser = "xzedc5gissli";
-            $dbpass = "Summer21!";
-
-            $db = "phptest";
-            $response;
-
-            $conn = new mysqli($dbhost, $dbuser, $dbpass, $db) or die ("Connect failed: %s\n". $conn -> error);
-            if ($conn->connect_errno) {
-                $response = 'fail';
-            } else {
-                $response = 'success';
-                $sql = "SELECT Author, Content, Date, Category, Image, URL, Title FROM myTest ORDER BY Date";
-                $result = $conn->query($sql);
-                if ($result->num_rows > 0) {
-                    $i = 0;
-                    while($row = $result->fetch_assoc()) {
-                        if ($i % 5 == 0) {
-                            if ($i != 0) {
-                                echo "</div>";
-                            }
-                            echo "<div class='row'>";
-                        }
-                        echo "<div class='card col'><a href='https://www.legacyhousetitle.com/blog-post.php?".$row["URL"]."'><img src='". $row["Image"]."'></a><div class='article-content-wrap'><div class='post-header'><h2 class='title'><a href='https://www.legacyhousetitle.com/blog-post.php?".$row["URL"]."'>".$row["Title"]."</a></h2><span class='meta-author'>"."By "."<a href='https://www.legacyhousetitle.com/author.php?".$row["Author"]."'>".$row["Author"]."</a></span><span class='meta-category'>"." | "."<a href='https://www.legacyhousetitle.com/blog-post.php?".row["Category"]."'>".$row["Category"]."</a></span><span class='meta-comment-count'>"." | No Comments"."</span></div></div></div>";
-                        $i++;
-                    }
-                    echo "</div>";
-                } else {
-                    echo "<h2>0 results</h2>";
-                }
-            }
-            return $response;
-        }
-
-        function CloseCon($conn) {
-            $conn -> close();
-        }
-
-        $connection = OpenCon();
-
-        ?>
+    <div class="posts pb-5 pt-5">
+        <div class="container">
+            <h5 class="display-5 mb-0">Great content coming soon!</h5>
+        </div>
     </div>
 
     <footer class="page-footer">

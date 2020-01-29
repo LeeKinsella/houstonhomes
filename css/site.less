@@ -11,7 +11,6 @@ body {
     padding: 0;
     margin: 0;
     .navbar {
-        overflow: hidden;
         padding: 28px;
         background-color: @background-color;
         transition: padding 0.1s ease 0.1s;
@@ -21,6 +20,8 @@ body {
             opacity: 0;
             z-index: 0;
             transition: opacity 0.1s ease 0.1s;
+            transition: margin-left 0.1s ease 0.1s;
+            margin-left: -28px;
             #search-box {
                 display: flex;
                 flex-direction: row;
@@ -77,6 +78,15 @@ body {
         }
         .navbar-collapse {
             flex-grow: 0;
+            transition: top 0.1s ease 0.1s;
+            @media @mobile {
+                position: absolute;
+                left: 0;
+                padding: 0 24px 0px;
+                width: 100%;
+                top: 166px;
+                background: @background-color;
+            }
         }
         .nav-link {
             color: @text-color !important;
@@ -89,6 +99,12 @@ body {
         }
         &.stuck {
             padding: 10px;
+            .search-container {
+                margin-left: -10px;
+            }
+            .navbar-collapse {
+                top: 105px;
+            }
             input {
                 font-size: 30px;
             }
@@ -157,7 +173,7 @@ body {
         padding: 4rem 0;
         .row {
             margin: 0;
-            .col-4 {
+            .col-4, .col-6, .col-12 {
                 padding: 5px 15px 5px 5px;
                 .card {
                     padding: 20px;
@@ -267,6 +283,8 @@ body {
     }
     .posts {
         padding: 3rem 2rem;
+        background-color: @background-color;
+        color: @text-color;
         .card {
             max-width: 20%;
             margin: 1rem;
@@ -300,6 +318,10 @@ body {
                 }
             }
         }
+    }
+    .announcement {
+        background-color: @background-color;
+        color: @text-color;
     }
     footer {
         font-family: Lato;
