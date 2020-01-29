@@ -4,7 +4,7 @@ include 'db_connection.php';
 
 $conn = OpenCon();
 
-echo "Connected Successfully";
+echo $conn;
 
 CloseCon($conn);
 
