@@ -11,6 +11,7 @@ body {
     padding: 0;
     margin: 0;
     .navbar {
+        overflow: hidden;
         padding: 28px;
         background-color: @background-color;
         transition: padding 0.1s ease 0.1s;
@@ -104,6 +105,9 @@ body {
         background-repeat: no-repeat;
         position: relative;
         margin: 0;
+        &.blog {
+            background-image: url('../images/backgrounds/frederick_blog.jpg');
+        }
         .overlay {
             position: absolute;
             min-height: 100%;
@@ -151,18 +155,104 @@ body {
     .testimonials {
         background-color: @kelly-green;
         padding: 4rem 0;
-        .wpbr-review__reviewer-image {
-            
+        .row {
+            margin: 0;
+            .col-4 {
+                padding: 5px 15px 5px 5px;
+                .card {
+                    padding: 20px;
+                }
+            }
         }
-        .wpbr-review__platform-icon {
-            background-image: url('https://www.federaltitle.com/wp-content/plugins/wp-business-reviews/assets/dist/images/sprite-google-places.png');
-            background-position: -10px -66px;
-            background-size: 200px 94px;
-            background-repeat: no-repeat;
-            right: 20px;
-            top: 20px;
-            display: block;
-            height: 18px;
+        .wpbr-review__header {
+            display: flex;
+            .wpbr-review__reviewer-image {
+                height: 60px;
+                margin-right: 10px;
+                overflow: hidden;
+                width: 60px;
+                img {
+                    width: 100%;
+                }
+            }
+            .wpbr-review__details {
+                .wpbr-review__platform-icon {
+                    position: absolute;
+                    background-image: url('https://www.federaltitle.com/wp-content/plugins/wp-business-reviews/assets/dist/images/sprite-google-places.png');
+                    background-position: -10px -66px;
+                    background-size: 200px 94px;
+                    background-repeat: no-repeat;
+                    right: 20px;
+                    top: 20px;
+                    display: block;
+                    height: 18px;
+                    width: 18px;
+                }
+                .wpbr-review__reviewer-name {
+                    margin-right: 30px;
+                    color: #5d6f80;
+                    font-family: inherit;
+                    font-size: 1em;
+                    line-height: 1.3;
+                    margin: 0 30px 2.5px 0;
+                    word-wrap: break-word;
+                }
+                .wpbr-review__rating {
+                    display: block;
+                    line-height: 0;
+                    margin-bottom: 5px;
+                    .wpbr-stars {
+                        background-image: url(https://www.federaltitle.com/wp-content/plugins/wp-business-reviews/assets/dist/images/sprite-google-places.png);
+                        background-position: -100px -10px;
+                        background-repeat: no-repeat;
+                        background-size: 200px 94px;
+                        display: inline-block;
+                        height: 18px;
+                        width: 90px;
+                        &.wpbr-stars--1 {
+                            background-position: -82px -10px;
+                        }
+                        &.wpbr-stars--1-half {
+                            background-position: -82px -38px;
+                        }
+                        &.wpbr-stars--2 {
+                            background-position: -64px -10px;
+                        }
+                        &.wpbr-stars--2-half {
+                            background-position: -64px -38px;
+                        }
+                        &.wpbr-stars--3 {
+                            background-position: -46px -10px;
+                        }
+                        &.wpbr-stars--3-half {
+                            background-position: -46px -38px;
+                        }
+                        &.wpbr-stars--4 {
+                            background-position: -28px -10px;
+                        }
+                        &.wpbr-stars--4-half {
+                            background-position: -28px -38px;
+                        }
+                        &.wpbr-stars--5 {
+                            background-position: -10px -10px;
+                        }
+                    }
+                }
+                .wpbr-review__timestamp {
+                    color: #5d6f80;
+                    font-size: 75%;
+                }
+            }
+        }
+        .wpbr-review__content {
+            margin-top: 10px;
+            p {
+                margin: 0;
+                color: #5d6f80;
+                a {
+                    color: @kelly-green;
+                }
+            }
         }
         .carousel-indicators {
             bottom: -40px;
@@ -172,6 +262,42 @@ body {
                 border-radius: 50%;
                 margin-right: 5px;
                 margin-left: 5px;
+            }
+        }
+    }
+    .posts {
+        padding: 3rem 2rem;
+        .card {
+            max-width: 20%;
+            margin: 1rem;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            img {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+            .article-content-wrap {
+                .post-header {
+                    .title {
+                        a {
+                            transition: color 0.2s ease;
+                            color: @kelly-green;
+                            text-decoration: none;
+                            font-size: 20px;
+                            font-family: Roboto;
+                            &:hover {
+                                color: @background-color;
+                            }
+                        }
+                    }
+                    span {
+                        font-size: 11px;
+                        color: #888;
+                        a {
+                            color: #888;
+                        }
+                    }
+                }
             }
         }
     }
