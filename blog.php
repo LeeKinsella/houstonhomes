@@ -27,6 +27,7 @@
     <link href="css/site.less" type="text/css" rel="stylesheet/less" media="screen,projection" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/b3561d853c.js" crossorigin="anonymous"></script>
+<!--    <link rel="stylesheet" href="https://i.icomoon.io/public/temp/12b75888b0/LegacyHouseTitle/style.css">-->
     <script src="js/jquery-3.4.1.slim.min.js" type="text/javascript"></script>
     <script async src="js/less.min.js" type="text/javascript" crossorigin="anonymous"></script>
     <script async src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
@@ -55,7 +56,7 @@
                     <a class="nav-link active" href="home.html">Home<span class="sr-only"> (current)</span></a>
                     <a class="nav-link" href="#">Testimonials</a>
                     <a class="nav-link" href="#">Blog</a>
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="contact.php">Contact</a>
                     <a class="nav-link" id="searchbox"><i class="fas fa-search"></i></a>
                 </div>
             </div>

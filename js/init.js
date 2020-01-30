@@ -1,14 +1,14 @@
 $(function () {
         
-    $('#testimonialsCarousel').carousel({
-        interval: false
-    });
-    $('#testimonialsCarouselTablet').carousel({
-        interval: false
-    });
-    $('#testimonialsCarouselMobile').carousel({
-        interval: false
-    });
+//    $('#testimonialsCarousel').carousel({
+//        interval: false
+//    });
+//    $('#testimonialsCarouselTablet').carousel({
+//        interval: false
+//    });
+//    $('#testimonialsCarouselMobile').carousel({
+//        interval: false
+//    });
     
     $(window).scroll(function() {
         if ($(window).scrollTop() != 0) {
