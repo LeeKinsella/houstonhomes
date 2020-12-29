@@ -74,6 +74,7 @@
     </nav>
 
     <div class="jumbotron contact">
+        <div class="background"></div>
         <div class="overlay"></div>
         <div class="promo container">
             <div class="col-8">
@@ -125,7 +126,7 @@
 
     if (isset($_POST['submit'])) {
         error_log('here');
-        error_log($_POST['catpcha-response']);
+        error_log($_POST['captcha-response']);
         if (isset($_POST['captcha-response']) && !empty($_POST['captcha-response'])) {
             error_log('success');
             $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secretKey.'&response='.$_POST['captcha-response']);
@@ -160,7 +161,8 @@
                     <div class="col-12 col-md-6 mb-5 mb-md-0">
                         <img src="images/LH Title Horizontal - White/LH%20Title%20Horizontal%20-%20White.png" alt="Footer logo">
                         <p>&copy; Legacy House Title Company</p>
-                        <p>240.549.6960</p>
+                        <p>5100 Buckeystown Pike, Suite 250, Frederick, MD 21704</p>
+                        <p><a href="tel:240-549-6960">240.549.6960</a></p>
                         <p>&reg; All rights reserved | Sitemap | Privacy Policy</p>
                     </div>
                     <div class="col-12 col-md-6">

@@ -11,6 +11,8 @@ body {
     padding: 0;
     margin: 0;
     .navbar {
+        position: fixed;
+        width: 100%;
         padding: 28px;
         background-color: @background-color;
         transition: all 0.1s ease 0.1s;
@@ -79,7 +81,7 @@ body {
         }
         .navbar-collapse {
             flex-grow: 0;
-            transition: top 0.1s ease 0.1s;
+            transition: height 0.35s ease, top 0.1s ease 0.1s;
             @media @mobile {
                 position: absolute;
                 left: 0;
@@ -87,6 +89,9 @@ body {
                 width: 100%;
                 top: 148px;
                 background: @background-color;
+                .nav-link:last-child {
+                    padding-bottom: 2rem;
+                }
             }
         }
         .nav-link {
@@ -94,6 +99,9 @@ body {
             margin-right: 2rem !important;
             font: 18px lato, sans-serif;
             transition: color 0.2s ease;
+            padding: 1rem 0;
+            display: flex;
+            align-items: center;
             &:hover {
                 color: @kelly-green !important;
             }
@@ -114,15 +122,13 @@ body {
     }
     .jumbotron {
         padding: 0;
-        background-image: url('../images/backgrounds/downtown_frederick.jpg');
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
+        overflow: hidden;
         position: relative;
         margin: 0;
+        border-radius: 0;
         &.blog, &.contact {
             .promo {
-                padding: 7rem 0;
+                padding: 260px 0 7rem 0;
                 h3 {
                     text-transform: none;
                 }
@@ -133,10 +139,17 @@ body {
             }
         }
         &.blog {
-            background-image: url('../images/backgrounds/frederick_blog.jpg');
+            .background {
+                background-image: url('../images/backgrounds/frederick_blog.jpg');
+                @media @mobile {
+                    background-image: url('../images/backgrounds/frederick_blog_mobile.jpg');
+                }
+            }
         }
         &.contact {
-            background-image: url('../images/backgrounds/contact_us.jpeg'); 
+            .background {
+                background-image: url('../images/backgrounds/contact_us.jpeg');
+            }
         }
         .overlay {
             position: absolute;
@@ -145,11 +158,29 @@ body {
             left: 0;
             top: 0;
             background-color: rgba(255, 255, 255, 0.5);
+            z-index: 1;
+        }
+        .background {
+            position: absolute;
+            min-height: 100%;
+            min-width: 100%;
+            left: 0;
+            top: 0;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-image: url('../images/backgrounds/downtown_frederick.jpg'); 
+            @media @mobile {
+                background-image: url('../images/backgrounds/downtown_frederick_mobile.jpg');
+            }
         }
         .promo {
             display: flex;
             font-family: 'Barlow Semi Condensed', sans-serif;
-            padding: 10rem 0;
+            padding: 308px 0 10rem 0;
+            .col-8 {
+                z-index: 1;
+            }
             h3 {
                 text-transform: uppercase;
                 line-height: 1;
@@ -444,6 +475,7 @@ body {
             ul {
                 margin: 0;
                 padding: 0;
+                list-style: none;
                 li {
                     margin-bottom: 16px;
                     &:not(:first-child) {
@@ -457,18 +489,27 @@ body {
             background-color: @background-color;
             .container {
                 align-items: center;
+                .contact-icons {
+                    a {
+                        margin-left: 20px;
+                        color: #777;
+                        font-size: 20px;
+                    }
+                }
+                @media @mobile {
+                    flex-direction: column !important;
+                    .contact-icons {
+                        margin-top: 1rem;
+                        a:first-child {
+                            margin-left: 0;
+                        }
+                    }
+                }
             }
             p {
                 font-size: 12px;
                 margin: 0;
                 color: #777;
-            }
-            .contact-icons {
-                a {
-                    margin-left: 20px;
-                    color: #777;
-                    font-size: 20px;
-                }
             }
         }
     }

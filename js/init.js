@@ -10,7 +10,13 @@ $(function () {
 //        interval: false
 //    });
     
+    var isDesktop = $(window).width() > 767;
+    
     $(window).scroll(function() {
+        if (isDesktop) {
+            var scroll = $(window).scrollTop();
+            $('.jumbotron .background').css('top', '0' + (scroll / 1.8) + 'px');
+        }
         if ($(window).scrollTop() != 0) {
             $('nav').addClass('stuck');
         } else {

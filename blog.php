@@ -64,6 +64,7 @@
     </nav>
 
     <div class="jumbotron blog">
+        <div class="background"></div>
         <div class="overlay"></div>
         <div class="promo container">
             <div class="col-8">
@@ -86,8 +87,8 @@
                     <div class="col-12 col-md-6 mb-5 mb-md-0">
                         <img src="images/LH Title Horizontal - White/LH%20Title%20Horizontal%20-%20White.png" alt="Footer logo">
                         <p>&copy; Legacy House Title Company</p>
-                        <p>3636 16th Street NW, Apt B624, Washington, D.C.</p>
-                        <p>20010 | 443.603.2701</p>
+                        <p>5100 Buckeystown Pike, Suite 250, Frederick, MD 21704</p>
+                        <p><a href="tel:240-549-6960">240.549.6960</a></p>
                         <p>&reg; All rights reserved | Sitemap | Privacy Policy</p>
                     </div>
                     <div class="col-12 col-md-6">
@@ -95,7 +96,7 @@
                         <ul class="menu">
                             <li><a href="#">Testimonials</a></li>
                             <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="contact.php">Contact</a></li>
                         </ul>
                     </div>
                 </div>
