@@ -1,14 +1,36 @@
 $(function () {
+    
+    fetch("../header.html")
+      .then(response => {
+        return response.text();
+      })
+      .then(data => {
+        document.querySelector("nav").innerHTML = data;
         
-//    $('#testimonialsCarousel').carousel({
-//        interval: false
-//    });
-//    $('#testimonialsCarouselTablet').carousel({
-//        interval: false
-//    });
-//    $('#testimonialsCarouselMobile').carousel({
-//        interval: false
-//    });
+        $('#searchbox').click(function() {
+            $('.search-container').addClass('active');
+            $('.header-container').removeClass('active');
+            $('.ui-autocomplete-input').focus();
+        });
+
+        $('#search-box i').click(function() {
+            $('.search-container').removeClass('active');
+            $('.header-container').addClass('active');
+            $('.ui-autocomplete-input').blur();
+        });
+        
+        setLink('.header-container');
+      });
+    
+    fetch("../footer.html")
+      .then(response => {
+        return response.text();
+      })
+      .then(data => {
+        document.querySelector("footer").innerHTML = data;
+        
+        setLink('.footer-container');
+      });
     
     var isDesktop = $(window).width() > 767;
     
@@ -24,16 +46,18 @@ $(function () {
         }
     });
     
-    $('#searchbox').click(function() {
-        $('.search-container').addClass('active');
-        $('.header-container').removeClass('active');
-        $('.ui-autocomplete-input').focus();
-    });
-    
-    $('#search-box i').click(function() {
-        $('.search-container').removeClass('active');
-        $('.header-container').addClass('active');
-        $('.ui-autocomplete-input').blur();
+    $('*').contents().each(function() {
+        if(this.nodeType === Node.COMMENT_NODE) {
+            $(this).remove();
+        }
     });
 
 });
+
+function setLink(selector) {
+    $(selector + ' .nav-link-dynamic').each(function() {
+        var path = $(this).attr('href');
+        var currentPagePath = window.location.pathname;
+        $(this).attr('href', (currentPagePath == path ? '#' : path));
+    });
+}

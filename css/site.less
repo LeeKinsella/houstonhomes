@@ -17,6 +17,9 @@ body {
         background-color: @background-color;
         transition: all 0.1s ease 0.1s;
         transition-property: padding, box-shadow;
+        @media @mobile {
+            transition-delay: 0s;
+        }
         .search-container {
             width: 100%;
             position: absolute;
@@ -70,6 +73,9 @@ body {
                 opacity: 1;
                 z-index: 1;
             }
+            button:focus {
+                outline: none;
+            }
         }
         .navbar-brand,
         .nav-link {
@@ -77,12 +83,16 @@ body {
             img {
                 height: 82px;
                 transition: height 0.1s ease 0.1s;
+                @media @mobile {
+                    transition-delay: 0s;
+                }
             }
         }
         .navbar-collapse {
             flex-grow: 0;
             transition: height 0.35s ease, top 0.1s ease 0.1s;
             @media @mobile {
+                transition-delay: 0s;
                 position: absolute;
                 left: 0;
                 padding: 0 24px 0px;
@@ -141,9 +151,6 @@ body {
         &.blog {
             .background {
                 background-image: url('../images/backgrounds/frederick_blog.jpg');
-                @media @mobile {
-                    background-image: url('../images/backgrounds/frederick_blog_mobile.jpg');
-                }
             }
         }
         &.contact {
@@ -169,10 +176,7 @@ body {
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
-            background-image: url('../images/backgrounds/downtown_frederick.jpg'); 
-            @media @mobile {
-                background-image: url('../images/backgrounds/downtown_frederick_mobile.jpg');
-            }
+            background-image: url('../images/backgrounds/downtown_frederick.jpg');
         }
         .promo {
             display: flex;

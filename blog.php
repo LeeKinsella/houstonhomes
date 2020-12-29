@@ -37,31 +37,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md sticky-top">
-        <div class="search-container">
-            <div class="container" id="search-box">
-                <form action="https://www.legacyhousetitle.com/" method="GET">
-                    <input type="text" name="s" id="s" placeholder="Start Typing..." class="ui-autocomplete-input" autocomplete="off">
-                </form>
-                <i class="search-close fas fa-times"></i>
-            </div>
-        </div>
-        <div class="header-container d-flex flex-row justify-content-between active">
-            <a class="navbar-brand" href="home.html"><img src="images/LH Title Horizontal - White/LH%20Title%20Horizontal%20-%20White.png" alt="Logo"></a>
-            <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation" aria-controls="main-navigation" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="main-navigation">
-                <div class="navbar-nav">
-                    <a class="nav-link active" href="home.html">Home<span class="sr-only"> (current)</span></a>
-                    <a class="nav-link" href="#">Testimonials</a>
-                    <a class="nav-link" href="#">Blog</a>
-                    <a class="nav-link" href="contact.php">Contact</a>
-                    <a class="nav-link" id="searchbox"><i class="fas fa-search"></i></a>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <nav class="navbar navbar-expand-md sticky-top"></nav>
 
     <div class="jumbotron blog">
         <div class="background"></div>
@@ -80,43 +56,7 @@
         </div>
     </div>
 
-    <footer class="page-footer">
-        <div class="footer-container">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-md-6 mb-5 mb-md-0">
-                        <img src="images/LH Title Horizontal - White/LH%20Title%20Horizontal%20-%20White.png" alt="Footer logo">
-                        <p>&copy; Legacy House Title Company</p>
-                        <p>5100 Buckeystown Pike, Suite 250, Frederick, MD 21704</p>
-                        <p><a href="tel:240-549-6960">240.549.6960</a></p>
-                        <p>&reg; All rights reserved | Sitemap | Privacy Policy</p>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <h6 class="font-weight-bold">Quick links</h6>
-                        <ul class="menu">
-                            <li><a href="#">Testimonials</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="contact.php">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <div class="container d-flex flex-row justify-content-between">
-                <p>&copy; Legacy Title Company. All rights reserved.</p>
-                <div class="contact-icons">
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-
-    </footer>
+    <footer class="page-footer"></footer>
 
 </body>
 
